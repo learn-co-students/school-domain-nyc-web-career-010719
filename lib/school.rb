@@ -1,4 +1,5 @@
 # code here!
+# code here!
 require 'pry'
 class School
   attr_reader :school_name
@@ -11,22 +12,17 @@ class School
   end
 
 def add_student(student_name,grade)
-  #self.roster = {} #same as saying self.roster
-  #@student_name = student_name #do i need this? accessor?
-  #student_
-  #unless self.roster.include?(student_name)
-  #@roster = {grade => []}
-  if self.roster[grade] != nil
-  self.roster[grade] << student_name
+  if @roster[grade] != nil
+  @roster[grade] << student_name
 else
-  self.roster[grade] = [student_name]
-#end
+  @roster[grade] = [student_name]
 end
 end
 
 def grade(grade)
-  self.roster[grade]
+  @roster[grade]
 end
+
 
 def sort
   @roster.each do |grade, student_name|
@@ -36,17 +32,50 @@ end
 
 end
 
-#passes 4 tests
+
+# require 'pry'
+# class School
+#   attr_reader :school_name
+#   attr_accessor :student_name, :grade, :roster
+#
+#
+#   def initialize(school_name)
+#     @school_name = school_name
+#     @roster = {}
+#   end
+#
 # def add_student(student_name,grade)
-#   self.roster = {} #same as saying self.roster
-#   @student_name = student_name #do i need this? accessor?
-#   student_arr = []
-#   self.roster = {grade => student_arr}
+#   if self.roster[grade] != nil
 #   self.roster[grade] << student_name
+# else
+#   self.roster[grade] = [student_name]
 # end
 # end
-
-
+#
+# def grade(grade)
+#   self.roster[grade]
+# end
+#
+#
+# def sort
+#   @roster.each do |grade, student_name|
+#     student_name.sort!
+# end
+# end
+#
+# end
+#
+# #passes 4 tests
+# # def add_student(student_name,grade)
+# #   self.roster = {} #same as saying self.roster
+# #   @student_name = student_name #do i need this? accessor?
+# #   student_arr = []
+# #   self.roster = {grade => student_arr}
+# #   self.roster[grade] << student_name
+# # end
+# # end
+#
+#
 
 # def add_student(student_name, grade)
 #   @student_name = student_name
